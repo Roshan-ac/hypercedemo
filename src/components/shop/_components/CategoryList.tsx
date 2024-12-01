@@ -1,8 +1,8 @@
 import React from "react";
-import ImageCard from "../CustomCards/ImageCard";
-import { CollectionItem } from "@/Interface/CollectionInterface";
+import ImageCard from "@/components/features/ImageCard";
+import { CollectionItem } from "@/types/CollectionInterface";
 
-const CategoryCard = ({ data }: { data: CollectionItem[] }) => {
+const CategoryList = ({ data }: { data: CollectionItem[] }) => {
   return (
     <div className="grid grid-cols-2 gap-6 mt-4 lg:mt-5 lg:gap-4 lg:grid-cols-4">
       {data.map((item: CollectionItem) => (
@@ -12,4 +12,4 @@ const CategoryCard = ({ data }: { data: CollectionItem[] }) => {
   );
 };
 
-export default CategoryCard;
+export default CategoryList;

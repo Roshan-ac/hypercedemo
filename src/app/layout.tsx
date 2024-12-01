@@ -1,33 +1,21 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./_Components/Navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
+import { DM_Sans } from "next/font/google";
+import Footer from "../components/footer/Footer";
 
-const dmSans = localFont({
-  src: [
-    {
-      path: "./fonts/DmSans.woff",
-      weight: "700", // Specify exact weight if possible
-      style: "bold",
-    },
-    {
-      path: "./fonts/DmSans.woff",
-      weight: "500", // Specify exact weight if possible
-      style: "medium",
-    },
-    {
-      path: "./fonts/DmSans.woff",
-      weight: "400", // Specify exact weight if possible
-      style: "normal",
-    },
-    // Add more weights/styles if you have different font files
-  ],
-  variable: "--font-dm-sans", // Use a more descriptive variable name
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700", "200", "300", "500", "600", "800", "900"],
+  display: "swap",
 });
 
-export const meta: Metadata = {
-  title: "Hyperce",
-  description: "Hyperce Demo",
+export const metadata: Metadata = {
+  title: "Hyperce Demo",
+  description: "Hyperce Demo Ecommerce app",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -35,15 +23,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
-      
-      <body
-        className={`${dmSans.variable} font-sans antialiased`} // Add font-sans
-      >
-          <Navbar />
-          {children}
+      <body className={`${dmSans.className} antialiased`}>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );

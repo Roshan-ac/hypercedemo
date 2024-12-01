@@ -1,10 +1,10 @@
 import React from "react";
-import LogoBar from "./LogoBar";
-import { CollectionMenu } from "./CollectionMenu";
-import { SearchBar } from "./SearchBar";
-import UserMenu from "./UserMenu";
+import LogoBar from "./_components/LogoBar";
+import { CollectionMenu } from "./_components/CollectionMenu";
+import { SearchBar } from "./_components/SearchBar";
+import UserMenu from "./_components/UserMenu";
 import { Separator } from "@/components/ui/separator";
-import { MobileSideBar } from "./MobileSideBar";
+import { MobileSideBar } from "./_components/MobileSideBar";
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
           <CollectionMenu />
           <Separator
             orientation="vertical"
-            className=" h-6 bg-[#BABEC3] lg:block hidden"
+            className=" h-6 bg-[#646b72] lg:block hidden"
           />
           <SearchBar />
           <UserMenu />

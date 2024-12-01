@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import FallbackImg from "../../../../public/FallbackImg.png";
-import { CollectionItem } from "@/Interface/CollectionInterface";
+import FallbackImg from "../../../public/FallbackImg.png";
+import { CollectionItem } from "@/types/CollectionInterface";
 
 const ImageCard = ({ item }: { item: CollectionItem }) => {
   return (

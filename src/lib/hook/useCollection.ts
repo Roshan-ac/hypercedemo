@@ -1,4 +1,4 @@
-import { CollectionsData } from "@/Interface/CollectionInterface";
+import { CollectionsData } from "@/types/CollectionInterface";
 import client from "@/lib/gaphqlClients";
 
 export const UsefetchCollection = async ({ pageParam = 0 }) => {
